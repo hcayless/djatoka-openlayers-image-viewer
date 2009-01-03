@@ -4,12 +4,9 @@
     <link rel="stylesheet" href="theme/default/style.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
     <script src="javascript/OpenLayers.js"></script>
-    <script src="javascript/jquery-1.2.6.min.js"></script>
     <script type="text/javascript">
       function init(){
         var metadataUrl = "http://aalcdl26.lib.unc.edu:8080/adore-djatoka/resolver?url_ver=Z39.88-2004&rft_id=http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2&svc_id=info:lanl-repo/svc/getMetadata";
-        var mapWidth = 512;
-        var mapHeight = 512;
         
         var OUlayer = new OpenLayers.Layer.OpenURL( "OpenURL",
           "http://aalcdl26.lib.unc.edu:8080/", {layername: 'basic', format:'image/jpeg', rft_id:'http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2', metadataUrl: metadataUrl} );
