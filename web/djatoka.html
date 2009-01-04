@@ -6,10 +6,10 @@
     <script src="javascript/OpenLayers.js"></script>
     <script type="text/javascript">
       function init(){
-        var metadataUrl = "http://aalcdl26.lib.unc.edu:8080/adore-djatoka/resolver?url_ver=Z39.88-2004&rft_id=http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2&svc_id=info:lanl-repo/svc/getMetadata";
+        var metadataUrl = "http://localhost:8080/adore-djatoka/resolver?url_ver=Z39.88-2004&rft_id=http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2&svc_id=info:lanl-repo/svc/getMetadata";
         
         var OUlayer = new OpenLayers.Layer.OpenURL( "OpenURL",
-          "http://aalcdl26.lib.unc.edu:8080/", {layername: 'basic', format:'image/jpeg', rft_id:'http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2', metadataUrl: metadataUrl} );
+          "http://localhost:8080/", {layername: 'basic', format:'image/jpeg', rft_id:'http://memory.loc.gov/gmd/gmd433/g4330/g4330/np000066.jp2', metadataUrl: metadataUrl} );
         var metadata = OUlayer.getImageMetadata();
         var resolutions = OUlayer.getResolutions();        
         var maxExtent = new OpenLayers.Bounds(0, 0, metadata.width, metadata.height);
